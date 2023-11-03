@@ -19,7 +19,7 @@ const Item = ({eachData}) => {
       <View style={{left: 10, flex: 1, flexDirection: 'column'}}>
         <Text>Title: {eachData.title}</Text>
         <Text>Description: {eachData.description}</Text>
-        <Text>Price: {eachData.price}</Text>
+        <Text>Price: ${eachData.price}</Text>
         <Text style={{color: 'green'}}>
           Discount: {eachData.discountPercentage} off
         </Text>
@@ -50,7 +50,6 @@ const ProductList = () => {
         }
         return response.json();
       })
-
       .then(d => {
         // console.log(d);
         setData(d.products);

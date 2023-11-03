@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {BottomNavigation} from 'react-native-paper';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import Product_Add from './Product/Product_App';
+import Product_Add from './Product/Product_Add';
 import Product_Detail from './Product/Product_Detail';
 import Product_List from './Product/Product_List';
 import Product_Search from './Product/Product_Search';
