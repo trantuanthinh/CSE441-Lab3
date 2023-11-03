@@ -1,25 +1,38 @@
-import React from 'react';
-import {Appbar} from 'react-native-paper';
+import React, {useState} from 'react';
+import {BottomNavigation} from 'react-native-paper';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import ProductList from './Product-List/ProductList';
+
+import Product_Add from './Product/Product_App';
+import Product_Detail from './Product/Product_Detail';
+import Product_List from './Product/Product_List';
+import Product_Search from './Product/Product_Search';
 
 const MainScreen = () => {
+  const [index, setIndex] = useState(0);
+  const [routes] = useState([
+    {
+      key: 'Product_List',
+      title: 'Products',
+      focusedIcon: 'folder',
+    },
+    {key: 'Product_Add', title: 'Add', focusedIcon: 'folder'},
+    {key: 'Product_Search', title: 'Search', focusedIcon: 'find'},
+    {key: 'Product_Detail', title: 'Detail', focusedIcon: 'calendar'},
+  ]);
+  const renderScene = BottomNavigation.SceneMap({
+    Product_List: Product_List,
+    Product_Add: Product_Add,
+    Product_Search: Product_Search,
+    Product_Detail: Product_Detail,
+  });
+
   return (
     <SafeAreaProvider>
-      <Appbar.Header>
-        <Appbar.Content title="Product List" />
-      </Appbar.Header>
-      <ProductList />
-      <Appbar
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: '#f0f0f0',
-        }}>
-        <Appbar.Content title="Product List" />
-      </Appbar>
+      <BottomNavigation
+        navigationState={{index, routes}}
+        onIndexChange={setIndex}
+        renderScene={renderScene}
+      />
     </SafeAreaProvider>
   );
 };

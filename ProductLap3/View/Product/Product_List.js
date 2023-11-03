@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, Image, SafeAreaView, Text, View} from 'react-native';
+import {Button, FlatList, Image, SafeAreaView, Text, View} from 'react-native';
 
 const Item = ({eachData}) => {
   return (
@@ -27,6 +27,11 @@ const Item = ({eachData}) => {
         <Text>Stock: {eachData.stock}</Text>
         <Text>Brand: {eachData.brand}</Text>
         <Text>Category: {eachData.category}</Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Button title="Detail" style={{color: 'blue'}} />
+          <Button title="Add" style={{color: 'blue'}} />
+          <Button title="Delete" style={{color: 'blue'}} />
+        </View>
       </View>
     </View>
   );
