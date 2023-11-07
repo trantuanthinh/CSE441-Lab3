@@ -13,11 +13,11 @@ const MainScreen = () => {
     {
       key: 'Product_List',
       title: 'Products',
-      focusedIcon: 'folder',
+      focusedIcon: 'devices',
     },
-    {key: 'Product_Add', title: 'Add', focusedIcon: 'folder'},
-    {key: 'Product_Search', title: 'Search', focusedIcon: 'find'},
-    {key: 'Product_Detail', title: 'Detail', focusedIcon: 'calendar'},
+    {key: 'Product_Add', title: 'Add', focusedIcon: 'plus-thick'},
+    {key: 'Product_Search', title: 'Search', focusedIcon: 'select-search'},
+    {key: 'Product_Detail', title: 'Detail', focusedIcon: 'details'},
   ]);
   const renderScene = BottomNavigation.SceneMap({
     Product_List: Product_List,
