@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813264260497",
+    "project_id": "fir-6b2c8",
+    "storage_bucket": "fir-6b2c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813264260497:android:2dc1d4482aee837faf9e30",
+        "android_client_info": {
+          "package_name": "com.productlap3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvz51bygRcuS592YyY1r7pwjyak5p980M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

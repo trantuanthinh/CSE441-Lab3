@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {Button, FlatList, Image, SafeAreaView, Text, View} from 'react-native';
+import {FlatList, Image, SafeAreaView, Text, View} from 'react-native';
+import 'react-native-gesture-handler'; 
 
 const Item = ({eachData}) => {
   return (
@@ -17,21 +18,8 @@ const Item = ({eachData}) => {
         }}
       />
       <View style={{left: 10, flex: 1, flexDirection: 'column'}}>
-        <Text>Title: {eachData.title}</Text>
-        <Text>Description: {eachData.description}</Text>
-        <Text>Price: ${eachData.price}</Text>
-        <Text style={{color: 'green'}}>
-          Discount: {eachData.discountPercentage} off
-        </Text>
-        <Text>Rating: {eachData.rating}</Text>
-        <Text>Stock: {eachData.stock}</Text>
-        <Text>Brand: {eachData.brand}</Text>
-        <Text>Category: {eachData.category}</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Button title="Detail" style={{color: 'blue'}} />
-          <Button title="Add" style={{color: 'blue'}} />
-          <Button title="Delete" style={{color: 'blue'}} />
-        </View>
+        <Text>Title: {eachData.name}</Text>
+        <Text>Description: {eachData.price} đ</Text>
       </View>
     </View>
   );
